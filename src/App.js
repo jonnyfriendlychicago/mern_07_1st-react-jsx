@@ -2,6 +2,7 @@
 import logo from './logo.svg'; // whacked this - well.... only whack it if you want to kill the spinning isotope
 import './App.css';
 import React from 'react'; // added this line
+import Person from './components/Person'
 
 function App() {
   return (
@@ -36,6 +37,13 @@ function App() {
               <li>Feed the dogs</li>
               <li>Get rid of .App slector in App.css</li>
             </ul>
+            <Person />
+            <Person />
+            <Person />
+            <Person />
+            <Person />
+            <Person />
+            <Person />
         
         
         </div>
