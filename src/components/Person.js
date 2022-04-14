@@ -4,7 +4,7 @@ const Person = (props) => {
     return (
 
         <>
-        <h2>I am a person.</h2> 
+        <h2>I am a person.  My name is {props.firstName} {props.lastName}.</h2> 
         </>
 
     )

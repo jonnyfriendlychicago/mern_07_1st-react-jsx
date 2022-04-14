@@ -2,7 +2,13 @@
 import logo from './logo.svg'; // whacked this - well.... only whack it if you want to kill the spinning isotope
 import './App.css';
 import React from 'react'; // added this line
-import Person from './components/Person'
+import Person from './components/Person'; 
+// import Button from 'react-bootstrap/Button';
+// import Card from 'react-bootstrap/Card';
+// above works to import the Bstrap components, but OMG so many lines.  do below instead; 
+import {Button, Card} from 'react-bootstrap';
+
+
 
 function App() {
   return (
@@ -10,14 +16,14 @@ function App() {
       <header>
         <div className="header_content"> 
             <div className="header_content_vert_left"> 
-                <a href="#" class="header_home_link" >
-                    <h1>Sitename</h1>
+                <a href="#" className="header_home_link" >
+                    <h1 >Sitename</h1>
                     <h2>Feel the love.</h2>
                 </a>
             </div>
-            <div className="header_content_vert_right"> 
+            <div className="header_content_vert_right" > 
                 <h2>firstName LastName</h2>
-                <h4>(UserID: plcehldr)</h4>
+                <p>(UserID: plcehldr)</p>
                 <div className="header_content_horiz_right">
                     <a href="#">My Profile</a>
                     <a href="#">Logout</a>
@@ -27,6 +33,7 @@ function App() {
       </header>
 
       <main>
+        <>
         <div className="row_left">
             <h1>Hello Dojo!</h1>  
             <h2>Things I need to do:</h2>
@@ -37,16 +44,29 @@ function App() {
               <li>Feed the dogs</li>
               <li>Get rid of .App slector in App.css</li>
             </ul>
-            <Person />
-            <Person />
-            <Person />
-            <Person />
-            <Person />
-            <Person />
-            <Person />
-        
-        
+            <Person firstName={ "Bill" } lastName={ "Murphy" }/>
+            <Person firstName={ "John" } lastName={ "Connor" }/>
         </div>
+        
+        {/* below is space for pasting of the bootstrap card content */}
+        
+        <Card style={{ width: '18rem' }}>
+          <Card.Img variant="top" src="/logo512.png" />
+          <Card.Body>
+            <Card.Title >Card Title</Card.Title>
+            <Card.Text>
+              Some quick example text to build on the card title and make up the bulk of
+              the card's content.
+            </Card.Text>
+            <Button variant="primary">Go somewhere</Button>
+          </Card.Body>
+        </Card>
+        
+        <div className="row_left">
+          <button type="button" class="btn btn-primary">Primary</button>
+        </div>
+
+        </>
       </main>
 
       <header className="App-header">
